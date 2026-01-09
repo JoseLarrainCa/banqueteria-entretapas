@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src={logo} 
               alt="Entre Tapas - Experiencia Gourmet" 
-              className="h-16 w-auto brightness-0 invert mb-6"
+              className="h-16 w-auto mb-6"
             />
             <p className="text-background/70 text-sm leading-relaxed">
               Creamos experiencias culinarias únicas con sabores auténticos

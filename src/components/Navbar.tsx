@@ -49,9 +49,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="Entre Tapas - Experiencia Gourmet" 
-            className={`h-12 md:h-16 w-auto transition-all duration-300 ${
-              isScrolled ? '' : 'brightness-0 invert'
-            }`}
+            className="h-12 md:h-16 w-auto"
           />
         </a>
 
@@ -67,7 +65,7 @@ const Navbar = () => {
           </a>
           <a
             href="#contacto"
-            className={`btn-hero ${isScrolled ? 'btn-outline' : ''}`}
+            className="px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border border-cream text-cream bg-transparent transition-all duration-300 hover:bg-cream hover:text-foreground"
           >
             Contáctanos
           </a>
