@@ -65,7 +65,11 @@ const Navbar = () => {
           </a>
           <a
             href="#contacto"
-            className="px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border border-cream text-cream bg-transparent transition-all duration-300 hover:bg-cream hover:text-foreground"
+            className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
+              isScrolled 
+                ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' 
+                : 'border-cream text-cream hover:bg-cream hover:text-foreground'
+            }`}
           >
             Contáctanos
           </a>
