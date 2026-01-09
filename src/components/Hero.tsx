@@ -37,16 +37,16 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <p className="text-cream/90 text-xs uppercase tracking-[0.4em] mb-6 animate-fade-up">
-          Bienvenidos a Élite
+          Bienvenidos a Entre Tapas
         </p>
         <h2 className="heading-display text-cream text-5xl md:text-7xl lg:text-8xl font-light leading-tight animate-fade-up">
-          Simplemente
+          Experiencia
           <br />
-          Extraordinario
+          Gourmet
         </h2>
         <p className="text-cream/80 mt-8 max-w-xl mx-auto text-base md:text-lg font-light leading-relaxed animate-fade-in-delay">
-          Creamos experiencias culinarias memorables con un servicio impecable
-          para los momentos más importantes de su vida.
+          Creamos experiencias culinarias únicas con sabores auténticos
+          para los momentos más especiales de tu vida.
         </p>
         <div className="mt-10 animate-fade-in-delay-2">
           <a href="#contacto" className="btn-hero">

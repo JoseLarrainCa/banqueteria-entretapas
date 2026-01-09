@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo-entretapas.jpg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,21 +45,14 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <a href="#" className="text-center">
-          <h1 
-            className={`heading-display text-2xl md:text-3xl font-semibold tracking-wide transition-colors duration-300 ${
-              isScrolled ? 'text-foreground' : 'text-cream'
+        <a href="#" className="flex items-center justify-center">
+          <img 
+            src={logo} 
+            alt="Entre Tapas - Experiencia Gourmet" 
+            className={`h-12 md:h-16 w-auto transition-all duration-300 ${
+              isScrolled ? '' : 'brightness-0 invert'
             }`}
-          >
-            ÉLITE
-          </h1>
-          <span 
-            className={`text-[10px] uppercase tracking-[0.35em] transition-colors duration-300 ${
-              isScrolled ? 'text-muted-foreground' : 'text-cream/80'
-            }`}
-          >
-            Banquetería & Eventos
-          </span>
+          />
         </a>
 
         {/* Right Navigation */}
