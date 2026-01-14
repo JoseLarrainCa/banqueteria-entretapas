@@ -21,7 +21,7 @@ const testimonials = [
     quote: "Profesionales de principio a fin. La atención al detalle y la creatividad en cada platillo hicieron de nuestra celebración algo único e inolvidable.",
     name: "Fernando & Lucia",
     event: "Aniversario 25 años",
-    image: "https://images.unsplash.com/photo-1529543544277-750e037b0f6f?w=800&q=80"
+    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80"
   },
   {
     id: 4,
