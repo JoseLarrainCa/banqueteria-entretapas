@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -10,6 +10,8 @@ const Contact = () => {
     eventType: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,10 +36,37 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formState);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mzddgpno', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+          eventType: formState.eventType,
+          message: formState.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormState({ name: '', email: '', phone: '', eventType: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -149,13 +178,31 @@ const Contact = () => {
           </div>
 
           <div className="reveal text-center pt-4">
-            <button
-              type="submit"
-              className="inline-flex items-center gap-3 px-10 py-4 text-xs uppercase tracking-[0.2em] font-medium border border-primary-foreground/80 text-primary-foreground bg-transparent transition-all duration-300 hover:bg-primary-foreground hover:text-primary"
-            >
-              Enviar Solicitud
-              <Send size={16} />
-            </button>
+            {submitStatus === 'success' ? (
+              <div className="flex items-center justify-center gap-3 text-primary-foreground">
+                <CheckCircle size={24} />
+                <span className="text-sm uppercase tracking-[0.2em]">
+                  ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                </span>
+              </div>
+            ) : (
+              <>
+                {submitStatus === 'error' && (
+                  <div className="flex items-center justify-center gap-2 text-red-300 mb-4">
+                    <AlertCircle size={18} />
+                    <span className="text-sm">Hubo un error. Por favor, intenta de nuevo.</span>
+                  </div>
+                )}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center gap-3 px-10 py-4 text-xs uppercase tracking-[0.2em] font-medium border border-primary-foreground/80 text-primary-foreground bg-transparent transition-all duration-300 hover:bg-primary-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar Solicitud'}
+                  <Send size={16} />
+                </button>
+              </>
+            )}
           </div>
         </form>
       </div>
