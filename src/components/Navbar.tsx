@@ -54,7 +54,7 @@ const Navbar = () => {
               isScrolled ? 'text-foreground' : 'text-cream'
             }`}
           >
-            <span className="absolute -top-2 -right-4 px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
+            <span className="absolute -top-4 -right-4 px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
               Nuevo
             </span>
             Estaciones
