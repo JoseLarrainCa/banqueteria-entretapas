@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo-entretapas.jpg';
 
 const Navbar = () => {
@@ -17,7 +18,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Servicios', href: '#servicios' },
-    { name: 'Estaciones', href: '#estaciones' },
     { name: 'Galería', href: '#galeria' },
   ];
 
@@ -64,6 +64,17 @@ const Navbar = () => {
           >
             Galería
           </a>
+          <Link
+            to="/estaciones"
+            className={`nav-link underline-animate relative ${
+              isScrolled ? 'text-foreground' : 'text-cream'
+            }`}
+          >
+            <span className="absolute -top-2 -right-4 px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
+              Nuevo
+            </span>
+            Estaciones
+          </Link>
           <a
             href="#contacto"
             className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
@@ -105,6 +116,16 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <Link
+            to="/estaciones"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="nav-link text-foreground flex items-center gap-2"
+          >
+            Estaciones
+            <span className="px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
+              Nuevo
+            </span>
+          </Link>
           <a
             href="#contacto"
             onClick={() => setIsMobileMenuOpen(false)}

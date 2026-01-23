@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-banquet.jpg';
 
 const Hero = () => {
@@ -52,15 +53,15 @@ const Hero = () => {
           <a href="#contacto" className="btn-hero">
             Solicitar Cotización
           </a>
-          <a 
-            href="#estaciones" 
+          <Link 
+            to="/estaciones" 
             className="group relative inline-flex items-center gap-2 px-8 py-4 bg-cream/10 backdrop-blur-sm border border-cream/50 text-cream text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:bg-cream hover:text-foreground overflow-hidden"
           >
             <span className="absolute -top-1 -right-1 px-2 py-0.5 bg-primary text-primary-foreground text-[10px] uppercase tracking-wider font-bold">
               Nuevo
             </span>
             Estaciones Temáticas
-          </a>
+          </Link>
         </div>
       </div>
 
