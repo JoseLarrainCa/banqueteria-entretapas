@@ -31,38 +31,22 @@ const Navbar = () => {
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Left Navigation */}
-        <div className="hidden md:flex items-center gap-10">
-          {navLinks.slice(0, 2).map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`nav-link underline-animate ${
-                isScrolled ? 'text-foreground' : 'text-cream'
-              }`}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-
-        {/* Logo */}
-        <a href="#" className="flex items-center justify-center">
-          <img 
-            src={logo} 
-            alt="Entre Tapas - Experiencia Gourmet" 
-            className="h-12 md:h-16 w-auto"
-          />
-        </a>
-
-        {/* Right Navigation */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8 flex-1">
           <a
-            href="#galeria"
+            href="#nosotros"
             className={`nav-link underline-animate ${
               isScrolled ? 'text-foreground' : 'text-cream'
             }`}
           >
-            Galería
+            Nosotros
+          </a>
+          <a
+            href="#servicios"
+            className={`nav-link underline-animate ${
+              isScrolled ? 'text-foreground' : 'text-cream'
+            }`}
+          >
+            Servicios
           </a>
           <Link
             to="/estaciones"
@@ -75,6 +59,35 @@ const Navbar = () => {
             </span>
             Estaciones
           </Link>
+        </div>
+
+        {/* Logo - Centered */}
+        <a href="#" className="flex items-center justify-center flex-shrink-0">
+          <img 
+            src={logo} 
+            alt="Entre Tapas - Experiencia Gourmet" 
+            className="h-12 md:h-16 w-auto"
+          />
+        </a>
+
+        {/* Right Navigation */}
+        <div className="hidden md:flex items-center gap-8 flex-1 justify-end">
+          <a
+            href="#galeria"
+            className={`nav-link underline-animate ${
+              isScrolled ? 'text-foreground' : 'text-cream'
+            }`}
+          >
+            Galería
+          </a>
+          <a
+            href="#testimonios"
+            className={`nav-link underline-animate ${
+              isScrolled ? 'text-foreground' : 'text-cream'
+            }`}
+          >
+            Testimonios
+          </a>
           <a
             href="#contacto"
             className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
