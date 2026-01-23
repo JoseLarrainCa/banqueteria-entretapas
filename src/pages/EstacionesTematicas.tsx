@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ThematicStations from '@/components/ThematicStations';
+import StationContactForm from '@/components/StationContactForm';
 import Footer from '@/components/Footer';
 
 const EstacionesTematicas = () => {
@@ -36,23 +37,8 @@ const EstacionesTematicas = () => {
       {/* Thematic Stations Content */}
       <ThematicStations />
 
-      {/* Contact Section for Stations */}
-      <section id="contacto-estaciones" className="py-24 md:py-32 bg-foreground text-background">
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="heading-serif text-4xl md:text-5xl mb-6">
-            ¿Te interesa una estación?
-          </h2>
-          <p className="text-background/80 mb-10 max-w-2xl mx-auto">
-            Cuéntanos sobre tu evento y te ayudaremos a elegir la estación perfecta para tus invitados.
-          </p>
-          <Link
-            to="/#contacto"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-background text-foreground text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:bg-background/90"
-          >
-            Solicitar Cotización
-          </Link>
-        </div>
-      </section>
+      {/* Contact Form for Stations */}
+      <StationContactForm />
 
       <Footer />
     </main>
