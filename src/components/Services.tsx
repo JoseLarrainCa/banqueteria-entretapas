@@ -20,8 +20,11 @@ const ServiceCard = ({ image, title, subtitle, description, delay }: ServiceCard
       <div className="img-zoom mb-6">
         <img
           src={image}
-          alt={title}
+          alt={`Servicio de ${title} - Catering gourmet Entre Tapas Santiago`}
           className="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+          width={400}
+          height={500}
         />
       </div>
       <p className="section-subtitle">{subtitle}</p>

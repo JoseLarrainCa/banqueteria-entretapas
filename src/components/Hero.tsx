@@ -29,8 +29,11 @@ const Hero = () => {
       <div className="parallax-bg absolute inset-0 w-full h-[120%] -top-[10%]">
         <img
           src={heroImage}
-          alt="Elegant banquet table setting"
+          alt="Mesa de banquete elegante con servicio de catering gourmet en Santiago"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-foreground/40" />
       </div>
