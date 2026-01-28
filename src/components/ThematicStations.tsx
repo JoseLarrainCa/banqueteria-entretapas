@@ -204,8 +204,11 @@ const ThematicStations = () => {
                 >
                   <img
                     src={station.image}
-                    alt={station.name}
+                    alt={`Estación de ${station.name} - Catering temático Entre Tapas`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={800}
+                    height={600}
                   />
                   {/* Gradient Overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-t ${currentCategory.gradient}`} />
@@ -285,8 +288,11 @@ const ThematicStations = () => {
             >
               <img
                 src={station.image}
-                alt={station.name}
+                alt={`Miniatura ${station.name} - Estación temática`}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                width={300}
+                height={225}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <span className="absolute bottom-2 left-2 right-2 text-white text-xs md:text-sm font-medium text-center">
