@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { ChefHat, Utensils, Users, Truck, Sparkles, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Station images
-import hamburguesaImg from '@/assets/stations/hamburguesa.jpeg';
+import burgerStation1 from '@/assets/stations/burger-station-1.jpeg';
+import burgerStation2 from '@/assets/stations/burger-station-2.png';
 import pizzaHornoImg from '@/assets/stations/pizza-horno.jpeg';
 import pizzaChampiImg from '@/assets/stations/pizza-champi.jpeg';
 import tacosImg from '@/assets/stations/tacos.jpeg';
@@ -64,7 +65,7 @@ const ThematicStations = () => {
         { 
           name: 'Hamburguesas Gourmet', 
           description: 'Hamburguesas artesanales con ingredientes premium, pan brioche casero y salsas especiales',
-          image: hamburguesaImg
+          image: burgerStation1
         },
         { 
           name: 'Pizzas Artesanales', 
@@ -87,7 +88,7 @@ const ThematicStations = () => {
         { 
           name: 'Hot Dogs Gourmet', 
           description: 'Hot dogs con salchichas artesanales y toppings creativos internacionales',
-          image: hamburguesaImg
+          image: burgerStation2
         },
         { 
           name: 'Pizzas Premium', 
