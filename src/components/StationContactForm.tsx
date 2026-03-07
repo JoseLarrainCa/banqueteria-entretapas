@@ -41,8 +41,8 @@ const StationContactForm = () => {
         setSubmitStatus('success');
         setFormState({ name: '', email: '', phone: '', stationType: '', guests: '', eventDate: '', message: '' });
         // Google Ads conversion tracking
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'conversion', {
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'conversion', {
             send_to: 'AW-831126588/JspbCO2CrYQcELz4p4wD',
             value: 1.0,
             currency: 'USD',
