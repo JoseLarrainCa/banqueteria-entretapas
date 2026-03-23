@@ -128,6 +128,7 @@ const StationContactForm = () => {
                 onChange={handleChange}
                 className="w-full bg-transparent border-b border-background/30 pb-3 text-background placeholder-background/40 focus:border-background focus:outline-none transition-colors"
                 placeholder="+56 9 1234 5678"
+                required
               />
             </div>
             <div>

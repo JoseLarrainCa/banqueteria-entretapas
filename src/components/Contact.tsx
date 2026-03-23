@@ -150,6 +150,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full bg-transparent border-b border-primary-foreground/30 pb-3 text-primary-foreground placeholder-primary-foreground/40 focus:border-primary-foreground focus:outline-none transition-colors"
                 placeholder="+56 9 1234 5678"
+                required
               />
             </div>
             <div className="reveal">
