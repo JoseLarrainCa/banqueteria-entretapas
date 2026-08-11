@@ -8,13 +8,11 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import FiestasPatriasStrip from '@/components/FiestasPatriasStrip';
 import FiestasPatriasModal from '@/components/FiestasPatriasModal';
 
 const Index = () => {
   return (
     <main className="min-h-screen">
-      <FiestasPatriasStrip />
       <Navbar />
       <Hero />
       <Menu18 />

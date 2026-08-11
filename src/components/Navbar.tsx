@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo-entretapas.jpg';
+import FiestasPatriasStrip from './FiestasPatriasStrip';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ const Navbar = () => {
           : 'bg-transparent py-6'
       }`}
     >
+      <FiestasPatriasStrip />
       <nav className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Left Navigation */}
         <div className="hidden md:flex items-center gap-8 flex-1">
@@ -89,6 +91,12 @@ const Navbar = () => {
             Testimonios
           </a>
           <a
+            href="#menu-18"
+            className="px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-chile-red text-cream transition-all duration-300 hover:opacity-90"
+          >
+            Cotiza tu 18
+          </a>
+          <a
             href="#contacto"
             className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
               isScrolled 
@@ -139,6 +147,13 @@ const Navbar = () => {
               Nuevo
             </span>
           </Link>
+          <a
+            href="#menu-18"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium bg-chile-red text-cream text-center"
+          >
+            Cotiza tu 18
+          </a>
           <a
             href="#contacto"
             onClick={() => setIsMobileMenuOpen(false)}
