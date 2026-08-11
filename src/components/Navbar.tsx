@@ -96,7 +96,7 @@ const Navbar = () => {
           </a>
           <a
             href="#menu-18"
-            className="px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-chile-red text-cream transition-all duration-300 hover:opacity-90"
+            className="px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-chile-red text-cream whitespace-nowrap transition-all duration-300 hover:opacity-90"
           >
             Cotiza tu 18
           </a>

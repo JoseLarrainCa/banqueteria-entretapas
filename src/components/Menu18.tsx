@@ -55,7 +55,7 @@ const Menu18 = () => {
   )}`;
 
   return (
-    <section ref={sectionRef} id="menu-18" className="relative section-padding bg-secondary">
+    <section ref={sectionRef} id="menu-18" className="relative section-padding bg-secondary scroll-mt-24">
       <Banderines className="absolute top-0 left-0 right-0" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14 reveal">
