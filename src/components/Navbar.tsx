@@ -26,12 +26,16 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-sm py-4'
-          : 'bg-transparent py-6'
+          ? 'bg-background/95 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
       }`}
     >
       <FiestasPatriasStrip />
-      <nav className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <nav
+        className={`max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
+          isScrolled ? 'py-4' : 'py-6'
+        }`}
+      >
         {/* Left Navigation */}
         <div className="hidden md:flex items-center gap-8 flex-1">
           <a
