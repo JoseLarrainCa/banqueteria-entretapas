@@ -233,7 +233,7 @@ const ThematicStations = () => {
                       <div className="flex items-baseline gap-2">
                         <span className="text-white/60 text-sm uppercase tracking-wider">Desde</span>
                         <span className="heading-serif text-4xl md:text-5xl text-white">
-                          {currentCategory.price}
+                          {station.price || currentCategory.price}
                         </span>
                         <span className="text-white/60 text-sm">P/P</span>
                       </div>
