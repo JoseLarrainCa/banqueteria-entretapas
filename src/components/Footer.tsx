@@ -77,6 +77,18 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        {/* Developer credit */}
+        <div className="pt-4 text-center md:text-right">
+          <a
+            href="https://www.try-omnis.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] text-background/40 hover:text-background/70 transition-colors"
+          >
+            Desarrollado por Omnis
+          </a>
+        </div>
       </div>
     </footer>
   );
