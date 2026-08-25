@@ -76,7 +76,8 @@ const ThematicStations = () => {
         { 
           name: 'Tacos y Fajitas', 
           description: 'Auténtica cocina mexicana con tortillas hechas al momento y guacamole fresco',
-          image: tacosImg
+          image: tacosImg,
+          price: '$20.000'
         },
       ],
     },
