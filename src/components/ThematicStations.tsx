@@ -16,6 +16,7 @@ interface Station {
   name: string;
   description: string;
   image: string;
+  price?: string;
 }
 
 interface CategoryData {
