@@ -16,6 +16,7 @@ interface Station {
   name: string;
   description: string;
   image: string;
+  price?: string;
 }
 
 interface CategoryData {
@@ -75,7 +76,8 @@ const ThematicStations = () => {
         { 
           name: 'Tacos y Fajitas', 
           description: 'Auténtica cocina mexicana con tortillas hechas al momento y guacamole fresco',
-          image: tacosImg
+          image: tacosImg,
+          price: '$20.000'
         },
       ],
     },
@@ -231,7 +233,7 @@ const ThematicStations = () => {
                       <div className="flex items-baseline gap-2">
                         <span className="text-white/60 text-sm uppercase tracking-wider">Desde</span>
                         <span className="heading-serif text-4xl md:text-5xl text-white">
-                          {currentCategory.price}
+                          {station.price || currentCategory.price}
                         </span>
                         <span className="text-white/60 text-sm">P/P</span>
                       </div>
