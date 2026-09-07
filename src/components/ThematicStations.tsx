@@ -3,7 +3,7 @@ import { ChefHat, Utensils, Users, Truck, Sparkles, Check, ChevronLeft, ChevronR
 
 // Station images
 import burgerStation1 from '@/assets/stations/burger-station-1.jpeg';
-import burgerStation2 from '@/assets/stations/burger-station-2.png';
+import burgerStation2 from '@/assets/stations/burger-station-2.jpg';
 import pizzaHornoImg from '@/assets/stations/pizza-horno.jpeg';
 import pizzaChampiImg from '@/assets/stations/pizza-champi.jpeg';
 import tacosImg from '@/assets/stations/tacos.jpeg';
