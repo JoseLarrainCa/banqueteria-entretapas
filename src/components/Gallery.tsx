@@ -127,6 +127,7 @@ const Gallery = () => {
               loop
               muted
               playsInline
+              preload="metadata"
               className="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]"
             />
             {/* Video Overlay */}
@@ -299,10 +300,10 @@ const Gallery = () => {
               <video
                 ref={videoRef10}
                 src={entretapasVideo10}
-                autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
@@ -325,10 +326,10 @@ const Gallery = () => {
               <video
                 ref={videoRef11}
                 src={entretapasVideo11}
-                autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
@@ -351,10 +352,10 @@ const Gallery = () => {
               <video
                 ref={videoRef12}
                 src={entretapasVideo12}
-                autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />

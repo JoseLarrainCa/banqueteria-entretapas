@@ -1,5 +1,5 @@
 # Robots.txt para Entre Tapas Gourmet
-# https://banqueteria.lovable.app
+# https://www.entretapasgourmet.cl
 
 User-agent: Googlebot
 Allow: /
@@ -23,4 +23,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://banqueteria.lovable.app/sitemap.xml
+Sitemap: https://www.entretapasgourmet.cl/sitemap.xml
