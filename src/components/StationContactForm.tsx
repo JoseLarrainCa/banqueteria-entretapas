@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { trackFormSubmit } from '@/lib/tracking';
 
 const StationContactForm = () => {
   const [formState, setFormState] = useState({
