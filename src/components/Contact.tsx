@@ -48,6 +48,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          formType: 'Cotización Evento',
           name: formState.name,
           email: formState.email,
           phone: formState.phone,
