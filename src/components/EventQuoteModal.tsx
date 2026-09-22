@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import heroImage from '@/assets/hero-banquet.jpg';
+import { trackFormSubmit, trackWhatsApp } from '@/lib/tracking';
 
 const STORAGE_KEY = 'event-quote-modal-dismissed';
 const WHATSAPP_PHONE = '56969078445';
@@ -92,13 +93,7 @@ const EventQuoteModal = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormState({ name: '', phone: '', email: '', eventDate: '', guests: '', message: '' });
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'conversion', {
-            send_to: 'AW-831126588/JspbCO2CrYQcELz4p4wD',
-            value: 1.0,
-            currency: 'USD',
-          });
-        }
+        trackFormSubmit('modal_cotiza_tu_evento');
       } else {
         setSubmitStatus('error');
       }
@@ -236,6 +231,7 @@ const EventQuoteModal = () => {
                   href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp('modal_cotiza_tu_evento')}
                   className="px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium bg-whatsapp text-cream text-center transition-all duration-300 hover:opacity-90"
                 >
                   Escríbenos por WhatsApp

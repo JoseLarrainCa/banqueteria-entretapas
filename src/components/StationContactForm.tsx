@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { trackFormSubmit } from '@/lib/tracking';
 
 const StationContactForm = () => {
   const [formState, setFormState] = useState({
@@ -40,14 +41,7 @@ const StationContactForm = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormState({ name: '', email: '', phone: '', stationType: '', guests: '', eventDate: '', message: '' });
-        // Google Ads conversion tracking
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'conversion', {
-            send_to: 'AW-831126588/JspbCO2CrYQcELz4p4wD',
-            value: 1.0,
-            currency: 'USD',
-          });
-        }
+        trackFormSubmit('cotizacion_estaciones');
       } else {
         setSubmitStatus('error');
       }
