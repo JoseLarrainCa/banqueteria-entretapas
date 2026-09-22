@@ -92,13 +92,7 @@ const EventQuoteModal = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormState({ name: '', phone: '', email: '', eventDate: '', guests: '', message: '' });
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'conversion', {
-            send_to: 'AW-831126588/JspbCO2CrYQcELz4p4wD',
-            value: 1.0,
-            currency: 'USD',
-          });
-        }
+        trackFormSubmit('modal_cotiza_tu_evento');
       } else {
         setSubmitStatus('error');
       }
