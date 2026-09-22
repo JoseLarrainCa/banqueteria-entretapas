@@ -1,6 +1,9 @@
 // Centralized Google Ads / GA4 tracking for all contact points.
 const ADS_ID = 'AW-831126588';
-const CONVERSION_LABEL = `${ADS_ID}/JspbCO2CrYQcELz4p4wD`;
+const CONVERSION_LABELS = [
+  `${ADS_ID}/JspbCO2CrYQcELz4p4wD`,
+  `${ADS_ID}/sXwqCLqgxt4BELz4p4wD`,
+] as const;
 
 type Gtag = (...args: unknown[]) => void;
 
@@ -18,10 +21,12 @@ export const trackContact = (
   const gtag = getGtag();
   if (!gtag) return;
 
-  gtag('event', 'conversion', {
-    send_to: CONVERSION_LABEL,
-    value: 1.0,
-    currency: 'CLP',
+  CONVERSION_LABELS.forEach((sendTo) => {
+    gtag('event', 'conversion', {
+      send_to: sendTo,
+      value: 1.0,
+      currency: 'CLP',
+    });
   });
 
   gtag('event', 'generate_lead', {
