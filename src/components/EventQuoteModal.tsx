@@ -231,6 +231,7 @@ const EventQuoteModal = () => {
                   href={whatsappUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsApp('modal_cotiza_tu_evento')}
                   className="px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium bg-whatsapp text-cream text-center transition-all duration-300 hover:opacity-90"
                 >
                   Escríbenos por WhatsApp
