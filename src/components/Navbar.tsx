@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo-entretapas.jpg';
-import FiestasPatriasStrip from './FiestasPatriasStrip';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +29,6 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <FiestasPatriasStrip />
       <nav
         className={`max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
           isScrolled ? 'py-4' : 'py-6'
@@ -95,10 +93,10 @@ const Navbar = () => {
             Testimonios
           </a>
           <a
-            href="#menu-18"
-            className="px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-chile-red text-cream whitespace-nowrap transition-all duration-300 hover:opacity-90"
+            href="#contacto"
+            className="px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-primary text-primary-foreground whitespace-nowrap transition-all duration-300 hover:bg-primary/90"
           >
-            Cotiza tu 18
+            Cotiza tu evento
           </a>
           <a
             href="#contacto"
@@ -152,11 +150,11 @@ const Navbar = () => {
             </span>
           </Link>
           <a
-            href="#menu-18"
+            href="#contacto"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium bg-chile-red text-cream text-center"
+            className="btn-primary text-center"
           >
-            Cotiza tu 18
+            Cotiza tu evento
           </a>
           <a
             href="#contacto"
