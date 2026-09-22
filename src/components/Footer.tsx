@@ -28,7 +28,11 @@ const Footer = () => {
             <ul className="space-y-4 text-sm text-background/70">
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-accent" />
-                <a href="tel:+56969078445" className="hover:text-background transition-colors">
+                <a
+                  href="tel:+56969078445"
+                  onClick={() => trackContact('form', 'telefono_footer')}
+                  className="hover:text-background transition-colors"
+                >
                   +56 9 6907 8445
                 </a>
               </li>
