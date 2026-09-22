@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import heroImage from '@/assets/hero-banquet.jpg';
+import { trackFormSubmit, trackWhatsApp } from '@/lib/tracking';
 
 const STORAGE_KEY = 'event-quote-modal-dismissed';
 const WHATSAPP_PHONE = '56969078445';
