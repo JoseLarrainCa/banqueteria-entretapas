@@ -1,5 +1,6 @@
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import logo from '@/assets/logo-entretapas.jpg';
+import { trackContact } from '@/lib/tracking';
 
 const Footer = () => {
   return (
