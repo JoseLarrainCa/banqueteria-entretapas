@@ -1,6 +1,6 @@
 const WhatsAppButton = () => {
   const phone = "56969078445";
-  const message = encodeURIComponent("Hola, me gustaría cotizar mi celebración de Fiestas Patrias (18 de septiembre) con Entre Tapas.");
+  const message = encodeURIComponent("Hola, me gustaría cotizar un evento con Entre Tapas Gourmet.");
   const url = `https://wa.me/${phone}?text=${message}`;
 
   return (

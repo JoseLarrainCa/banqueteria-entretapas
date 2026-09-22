@@ -50,8 +50,6 @@ export default {
         olive: "hsl(var(--olive))",
         gold: "hsl(var(--gold))",
         cream: "hsl(var(--cream))",
-        "chile-red": "hsl(var(--chile-red))",
-        "chile-blue": "hsl(var(--chile-blue))",
         whatsapp: "hsl(var(--whatsapp))",
         "warm-gray": "hsl(var(--warm-gray))",
         sidebar: {

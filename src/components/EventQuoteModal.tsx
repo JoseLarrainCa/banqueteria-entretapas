@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { X, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import bannerAsset from '@/assets/fiestas-patrias-banner.png.asset.json';
-import Banderines from './Banderines';
+import heroImage from '@/assets/hero-banquet.jpg';
 
-const STORAGE_KEY = 'fp18-modal-dismissed';
+const STORAGE_KEY = 'event-quote-modal-dismissed';
 const WHATSAPP_PHONE = '56969078445';
 
-const FiestasPatriasModal = () => {
+const EventQuoteModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formState, setFormState] = useState({
     name: '',
@@ -56,7 +55,7 @@ const FiestasPatriasModal = () => {
 
   const whatsappUrl = () => {
     const parts = [
-      'Hola, quiero cotizar mi celebración de Fiestas Patrias (18 de septiembre).',
+      'Hola, quiero cotizar un evento con Entre Tapas Gourmet.',
       formState.name ? `Mi nombre es ${formState.name}.` : '',
       formState.guests ? `Seríamos ${formState.guests} personas.` : '',
       formState.eventDate ? `Fecha estimada: ${formState.eventDate}.` : '',
@@ -80,7 +79,7 @@ const FiestasPatriasModal = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          formType: 'Cotización Fiestas Patrias',
+          formType: 'Cotización Evento',
           name: formState.name,
           phone: formState.phone,
           email: formState.email,
@@ -125,7 +124,7 @@ const FiestasPatriasModal = () => {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Cotiza tu 18"
+        aria-label="Cotiza tu evento"
         className="relative z-10 w-full max-w-2xl bg-card shadow-2xl animate-scale-in my-auto"
       >
         <button
@@ -136,27 +135,30 @@ const FiestasPatriasModal = () => {
           <X size={18} />
         </button>
 
-        <img
-          src={bannerAsset.url}
-          alt="Fiestas Patrias — Reserva tu evento gourmet con Entre Tapas"
-          className="w-full h-auto"
-          loading="eager"
-        />
-        <Banderines />
+        <div className="relative h-48 md:h-56 overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Banquete gourmet preparado para un evento de Entre Tapas"
+            className="h-full w-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-foreground/35" />
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-cream">
+            <p className="text-xs uppercase tracking-[0.3em] text-cream/80 mb-2">Eventos gourmet</p>
+            <h2 className="heading-display text-4xl md:text-5xl font-light">Cotiza tu evento</h2>
+          </div>
+        </div>
 
         <div className="px-6 md:px-10 py-6 md:py-8">
-          <p className="section-subtitle mb-2">18 de Septiembre · Cupos limitados</p>
-          <h2 className="heading-display text-3xl md:text-4xl font-light mb-2">Cotiza tu 18</h2>
           <p className="text-sm text-muted-foreground mb-6">
-            Empanadas, anticuchos, choripán y más, servidos con estilo gourmet. Reserva tu cupo
-            antes de que se agenden las fechas.
+            Cuéntanos fecha, número de invitados y estilo de celebración para preparar una propuesta a medida.
           </p>
 
           {submitStatus === 'success' ? (
             <div className="flex items-start gap-3 text-primary py-4">
               <CheckCircle size={22} className="mt-0.5 shrink-0" />
               <p className="text-sm">
-                ¡Solicitud enviada! Te contactaremos muy pronto con tu propuesta para el 18.
+                ¡Solicitud enviada! Te contactaremos muy pronto con una propuesta para tu evento.
               </p>
             </div>
           ) : (
@@ -213,7 +215,7 @@ const FiestasPatriasModal = () => {
                 rows={2}
                 value={formState.message}
                 onChange={handleChange}
-                placeholder="Ubicación, preferencias, horario..."
+                placeholder="Ubicación, tipo de evento, preferencias..."
               />
 
               {submitStatus === 'error' && (
@@ -247,4 +249,4 @@ const FiestasPatriasModal = () => {
   );
 };
 
-export default FiestasPatriasModal;
+export default EventQuoteModal;
