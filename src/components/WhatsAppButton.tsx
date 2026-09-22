@@ -1,3 +1,5 @@
+import { trackWhatsApp } from '@/lib/tracking';
+
 const WhatsAppButton = () => {
   const phone = "56969078445";
   const message = encodeURIComponent("Hola, me gustaría cotizar un evento con Entre Tapas Gourmet.");
