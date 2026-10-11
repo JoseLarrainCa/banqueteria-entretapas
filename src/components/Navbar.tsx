@@ -36,7 +36,7 @@ const Navbar = () => {
         }`}
       >
         {/* Left Navigation */}
-        <div className="hidden md:flex items-center gap-8 justify-self-start">
+        <div className="hidden md:flex items-center gap-8 flex-1">
           <a
             href="#nosotros"
             className={`nav-link underline-animate ${
