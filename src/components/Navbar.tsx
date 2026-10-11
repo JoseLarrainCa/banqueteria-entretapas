@@ -76,7 +76,7 @@ const Navbar = () => {
         </a>
 
         {/* Right Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1 justify-end justify-self-end">
+        <div className="hidden md:flex items-center gap-8 flex-1 justify-end">
           <a
             href="#galeria"
             className={`nav-link underline-animate ${
