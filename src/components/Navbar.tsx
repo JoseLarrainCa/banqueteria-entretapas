@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '@/assets/logo-entretapas.jpg';
+import logoDark from '@/assets/logo-entretapas-dark.png';
+import logoWhite from '@/assets/logo-entretapas-white.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
