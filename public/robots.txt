@@ -1,5 +1,5 @@
 # Robots.txt para Entre Tapas Gourmet
-# https://www.entretapasgourmet.cl
+# https://entretapasgourmet.cl
 
 User-agent: Googlebot
 Allow: /
@@ -23,4 +23,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.entretapasgourmet.cl/sitemap.xml
+Sitemap: https://entretapasgourmet.cl/sitemap.xml

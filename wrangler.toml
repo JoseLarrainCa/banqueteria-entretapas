@@ -1,0 +1,26 @@
+# Cloudflare Workers — Entre Tapas Gourmet (solo página; sin base propia)
+# Deploy:  npm run cf:deploy     (build de la SPA + wrangler deploy)
+# Cuenta Cloudflare "Omnis" (jose@try-omnis.cl) — la de la flota.
+
+name = "entretapas"
+main = "worker/index.ts"
+compatibility_date = "2025-01-01"
+account_id = "4348d418d61283075685bc8bd4caeaae"
+
+# El dominio sigue en Lovable: mientras tanto la copia vive en entretapas.omnis-apps.workers.dev
+# (con noindex). Las [[routes]] de entretapasgourmet.cl se agregan el día del cambio.
+workers_dev = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+# Sin esto el Worker no corre para la portada: ni el host canónico ni el corte de los videos.
+run_worker_first = true
+
+# Base compartida de leads de toda la flota: la copia del formulario se guarda ahí ANTES del
+# correo, y el monitor de los lunes revisa que los correos hayan salido.
+[[d1_databases]]
+binding = "leads_flota"
+database_name = "leads-flota"
+database_id = "1ed01ff8-7de1-4b86-8784-3dd6657528ed"

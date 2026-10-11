@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { X, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import heroImage from '@/assets/hero-banquet.jpg';
 import { trackFormSubmit, trackWhatsApp } from '@/lib/tracking';
+import { copiarLeadAFlota, mensajeConDetalles } from '@/lib/aviso-lead';
 
 const STORAGE_KEY = 'event-quote-modal-dismissed';
 const WHATSAPP_PHONE = '56969078445';
@@ -74,6 +75,17 @@ const EventQuoteModal = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+
+    // Copia a la base de leads de la flota (no reemplaza a Formspree).
+    copiarLeadAFlota(
+      {
+        nombre: formState.name,
+        telefono: formState.phone,
+        correo: formState.email,
+        mensaje: mensajeConDetalles({ Fecha: formState.eventDate, Personas: formState.guests, Mensaje: formState.message }),
+      },
+      'modal_cotiza_tu_evento',
+    );
 
     try {
       const response = await fetch('https://formspree.io/f/mzddgpno', {
@@ -184,7 +196,8 @@ const EventQuoteModal = () => {
                   name="email"
                   value={formState.email}
                   onChange={handleChange}
-                  placeholder="Email"
+                  placeholder="Email *"
+                  required
                 />
                 <input
                   className={inputClass}

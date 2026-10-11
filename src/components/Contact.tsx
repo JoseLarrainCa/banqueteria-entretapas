@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { trackFormSubmit } from '@/lib/tracking';
+import { copiarLeadAFlota, mensajeConDetalles } from '@/lib/aviso-lead';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,6 +42,17 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+
+    // Copia a la base de leads de la flota (no reemplaza a Formspree).
+    copiarLeadAFlota(
+      {
+        nombre: formState.name,
+        telefono: formState.phone,
+        correo: formState.email,
+        mensaje: mensajeConDetalles({ 'Tipo de evento': formState.eventType, Mensaje: formState.message }),
+      },
+      'contacto_home',
+    );
 
     try {
       const response = await fetch('https://formspree.io/f/mzddgpno', {
