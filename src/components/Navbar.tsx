@@ -31,12 +31,12 @@ const Navbar = () => {
       }`}
     >
       <nav
-        className={`max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
+        className={`max-w-[1400px] mx-auto px-6 md:px-8 relative flex items-center justify-between transition-all duration-500 ${
           isScrolled ? 'py-4' : 'py-6'
         }`}
       >
         {/* Left Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1">
+        <div className="hidden md:flex items-center gap-6 flex-1">
           <a
             href="#nosotros"
             className={`nav-link underline-animate ${
@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo - Centered */}
-        <a href="#" className="flex items-center justify-center flex-shrink-0">
+        <a href="#" className="flex items-center justify-center flex-shrink-0 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <img
             src={isScrolled ? logoDark : logoWhite}
             alt="Entre Tapas - Experiencia Gourmet"
@@ -76,7 +76,7 @@ const Navbar = () => {
         </a>
 
         {/* Right Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1 justify-end">
+        <div className="hidden md:flex items-center gap-4 flex-1 justify-end">
           <a
             href="#galeria"
             className={`nav-link underline-animate ${
@@ -95,13 +95,13 @@ const Navbar = () => {
           </a>
           <a
             href="#contacto"
-            className="px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-primary text-primary-foreground whitespace-nowrap transition-all duration-300 hover:bg-primary/90"
+            className="px-4 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-primary text-primary-foreground whitespace-nowrap transition-all duration-300 hover:bg-primary/90"
           >
             Cotiza tu evento
           </a>
           <a
             href="#contacto"
-            className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
+            className={`hidden xl:inline-block px-4 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
               isScrolled 
                 ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' 
                 : 'border-cream text-cream hover:bg-cream hover:text-foreground'
