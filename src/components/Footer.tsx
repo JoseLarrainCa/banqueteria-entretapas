@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <img 
-              src={logo} 
+              src={logoWhite} 
               alt="Entre Tapas - Experiencia Gourmet" 
               className="h-16 w-auto mb-6"
             />
