@@ -31,12 +31,12 @@ const Navbar = () => {
       }`}
     >
       <nav
-        className={`max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
+        className={`max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] transition-all duration-500 ${
           isScrolled ? 'py-4' : 'py-6'
         }`}
       >
         {/* Left Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1">
+        <div className="hidden md:flex items-center gap-8 justify-self-start">
           <a
             href="#nosotros"
             className={`nav-link underline-animate ${
