@@ -1,5 +1,5 @@
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/logo-entretapas.jpg';
+import logoWhite from '@/assets/logo-entretapas-white.png';
 import { trackContact } from '@/lib/tracking';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <img 
-              src={logo} 
+              src={logoWhite} 
               alt="Entre Tapas - Experiencia Gourmet" 
               className="h-16 w-auto mb-6"
             />

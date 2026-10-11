@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '@/assets/logo-entretapas.jpg';
+import logoDark from '@/assets/logo-entretapas-dark.png';
+import logoWhite from '@/assets/logo-entretapas-white.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,7 +59,7 @@ const Navbar = () => {
               isScrolled ? 'text-foreground' : 'text-cream'
             }`}
           >
-            <span className="absolute -top-4 -right-4 px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
+            <span className="absolute -top-3 -right-7 px-1.5 py-0.5 bg-primary text-primary-foreground text-[8px] uppercase tracking-wider font-bold rounded-sm">
               Nuevo
             </span>
             Estaciones
@@ -67,9 +68,9 @@ const Navbar = () => {
 
         {/* Logo - Centered */}
         <a href="#" className="flex items-center justify-center flex-shrink-0">
-          <img 
-            src={logo} 
-            alt="Entre Tapas - Experiencia Gourmet" 
+          <img
+            src={isScrolled ? logoDark : logoWhite}
+            alt="Entre Tapas - Experiencia Gourmet"
             className="h-12 md:h-16 w-auto"
           />
         </a>
