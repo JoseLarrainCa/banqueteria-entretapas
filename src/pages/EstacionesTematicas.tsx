@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import ThematicStations from '@/components/ThematicStations';
 import StationContactForm from '@/components/StationContactForm';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
+
 
 const EstacionesTematicas = () => {
   useEffect(() => {
@@ -41,6 +43,8 @@ const EstacionesTematicas = () => {
       <StationContactForm />
 
       <Footer />
+      <WhatsAppButton />
+
     </main>
   );
 };
