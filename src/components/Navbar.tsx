@@ -76,7 +76,7 @@ const Navbar = () => {
         </a>
 
         {/* Right Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1 justify-end">
+        <div className="hidden md:flex items-center gap-4 flex-1 justify-end">
           <a
             href="#galeria"
             className={`nav-link underline-animate ${
@@ -95,13 +95,13 @@ const Navbar = () => {
           </a>
           <a
             href="#contacto"
-            className="px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-primary text-primary-foreground whitespace-nowrap transition-all duration-300 hover:bg-primary/90"
+            className="px-4 py-2.5 text-xs uppercase tracking-[0.15em] font-medium bg-primary text-primary-foreground whitespace-nowrap transition-all duration-300 hover:bg-primary/90"
           >
             Cotiza tu evento
           </a>
           <a
             href="#contacto"
-            className={`px-6 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
+            className={`hidden xl:inline-block px-4 py-2.5 text-xs uppercase tracking-[0.15em] font-medium border transition-all duration-300 ${
               isScrolled 
                 ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' 
                 : 'border-cream text-cream hover:bg-cream hover:text-foreground'
