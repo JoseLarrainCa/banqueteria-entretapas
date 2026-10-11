@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo - Centered */}
-        <a href="#" className="flex items-center justify-center flex-shrink-0">
+        <a href="#" className="flex items-center justify-center flex-shrink-0 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <img
             src={isScrolled ? logoDark : logoWhite}
             alt="Entre Tapas - Experiencia Gourmet"
